@@ -10,7 +10,7 @@ set(SOURCE_PATH "${PROJECT_SOURCE_DIR}/src")
 
 
 include_directories(${SOURCE_PATH})
-#add_library(PrintIP ${SOURCE_PATH}/printIP.cpp)
+
 # find packages
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
@@ -27,7 +27,6 @@ target_compile_options(version_lib PRIVATE
 
 add_executable(PrintIP ${SOURCE_PATH}/main.cpp)
 
-#target_link_libraries(PrintIP meta)
 
 set_target_properties(PrintIP PROPERTIES
         CXX_STANDARD 17
